@@ -1,0 +1,186 @@
+import pyautogui as auto
+import time as neram
+# relname or itemcode
+itemcodea = auto.prompt(text="ENTER ITEM CODE : ")
+print(itemcodea)
+relname = itemcodea.upper()
+print(relname)
+# Item Nameuuu
+itemnamea = auto.prompt(text="ENTER ITEM NAME : ")
+print(itemnamea)
+proname = itemnamea.upper()
+print(proname)
+#  Quantity of Item
+itemqty = auto.prompt(text="ENTER QTY : ")
+qty = int(itemqty)
+print(qty)
+brqty = qty/2
+barqty = round(brqty)
+barcode = str(barqty)
+# Enter the Amount which is int
+itemcost = auto.prompt(text="ENTER THE AMOUNT : ")
+amt = itemcost
+amount = str(amt)
+val = auto.confirm(text="Close all other background apps",buttons=("OK","CANCEL"))
+if val == "OK":
+    auto.rightClick(167 ,749)
+    neram.sleep(3.5)
+    auto.click(139 ,534)
+    neram.sleep(10)
+    nval = auto.confirm(text="Expired or Not",buttons=("Expired","Not Expired"))
+    if nval == "Expired":
+        # auto.click(758 ,682)
+        # neram.sleep(2)
+        # auto.moveTo(641 ,325)
+        # neram.sleep(1)
+        # auto.click(701 ,260)
+        # neram.sleep(1)
+        # auto.rightclick(267 ,747)
+        # neram.sleep(2)
+        # auto.click(237 ,593)
+        # neram.sleep(1.5)
+        # neram.sleep(5)
+        # auto.click(284 ,49)
+        # neram.sleep(3)
+        # auto.typewrite("https://temp-mail.org/en/")
+        # auto.press('enter')
+        # neram.sleep(20)
+        # auto.click(879 ,275)
+        # neram.sleep(2)
+        # auto.click(506 ,754)
+        # neram.sleep(2)
+        # auto.click(407 ,347)
+        # auto.hotkey("Ctrl","V")
+        # neram.sleep(2)
+        # auto.click(608 ,350)
+        # auto.confirm(text="Do It Exist")
+        # neram.sleep(1)
+        # auto.click(483 ,398)
+        # neram.sleep(1.5)
+        # auto.click(263 ,749)
+        # neram.sleep(1.5)
+        # auto.scroll(500)
+        # neram.sleep(1.5)
+
+        pass
+
+
+
+
+    elif nval == "Not Expired":
+        # For Duplication of the space
+        auto.click(150 ,38)
+        neram.sleep(1)
+        auto.click(177 ,147)
+        # Remaining for entering the valid details IN
+        neram.sleep(5)
+        auto.click(355 ,402)
+        neram.sleep(2)
+        auto.moveTo(1072 ,577)
+        neram.sleep(1)
+        auto.scroll(-1000)
+        neram.sleep(2)
+        auto.doubleClick(995 ,429)
+        neram.sleep(1)
+        auto.typewrite(relname,interval=0.25)
+        neram.sleep(2)
+        auto.click(1043 ,253)
+        neram.sleep(2)
+        auto.doubleClick(983 ,342)
+        neram.sleep(1.5)
+        auto.typewrite(relname,interval=0.15)
+        neram.sleep(1)
+        auto.click(1007 ,208)
+        neram.sleep(1)
+        auto.doubleClick(971 ,262)
+        neram.sleep(1)
+        auto.typewrite(amount,interval=0.05)
+        neram.sleep(1)
+        auto.click(1030 ,78)
+        neram.sleep(1)
+        auto.doubleClick(991 ,121)
+        neram.sleep(1)
+        auto.typewrite(proname,interval=0.25)
+        neram.sleep(1.5)
+        auto.scroll(1000)
+        neram.sleep(1.5)
+        auto.click(1015 ,381)
+        neram.sleep(1.5)
+        auto.doubleClick(984 ,427)
+        neram.sleep(1.5)
+        auto.typewrite(proname,interval=0.25)
+        neram.sleep(1.5)
+        auto.click(1002 ,334)
+        neram.sleep(1.5)
+        auto.doubleClick(972 ,380)
+        neram.sleep(1.5)
+        auto.typewrite(amount,interval=1)
+        neram.sleep(2.5)
+        # Important part Has been completed remaining is printing part given to sir
+        auto.click(1171 ,81)
+        neram.sleep(2)
+        auto.doubleClick(1094 ,189)
+        neram.sleep(1.5)
+        auto.typewrite(barcode,interval=0.25)
+        neram.sleep(2)
+        printa = auto.confirm(text="Do You Really want to print?",buttons=("Damn Yes","No Shit","I Do"))
+        neram.sleep(1.5)
+        if printa == "Damn Yes":
+            auto.click(1187 ,185)
+            neram.sleep(2)
+            auto.click(150 ,38)
+            neram.sleep(1)
+            auto.click(183 ,125)
+            neram.sleep(2)
+            auto.typewrite(proname,interval=0.25)
+            neram.sleep(1)
+            auto.press('enter')
+            time.sleep(0.5)
+            exis = auto.confirm(text="Do Item Exists??")
+            print(exis)
+            if exis == "OK":
+                auto.click(737 ,375)
+                neram.sleep(2.5)
+                auto.click(1207 ,14)
+                neram.sleep(1)
+                auto.click(1207 ,14)
+                neram.sleep(1)
+                auto.click(618 ,364)
+        elif printa == "No Shit":
+            auto.click(150 ,38)
+            neram.sleep(1)
+            auto.click(183 ,125)
+            neram.sleep(2)
+            auto.typewrite(proname,interval=0.25)
+            neram.sleep(1)
+            auto.press('enter')
+            exis = auto.confirm(text="Do Item Exists??")
+            print(exis)
+            if exis == "OK":
+                auto.click(737 ,375)
+                neram.sleep(2.5)
+                auto.click(1207 ,14)
+                neram.sleep(1)
+                auto.click(1207 ,14)
+                neram.sleep(1)
+                auto.click(618 ,364)
+        elif printa == "I Do":
+            neram.sleep(2)
+            auto.click(150 ,38)
+            neram.sleep(1)
+            auto.click(183 ,125)
+            neram.sleep(2)
+            auto.typewrite(proname,interval=0.25)
+            neram.sleep(1)
+            auto.press('enter')
+
+
+
+
+
+
+
+
+
+
+
